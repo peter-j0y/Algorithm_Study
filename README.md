@@ -46,10 +46,10 @@ ex ) 0 주차
 
 | 이름 | 주제  |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 동훈  | [알고리즘 - 너무쉽다](https://github.com/Seungmin-develop/Algorithm_Study) |
-| 희직  | [개발 - 희직하는법](https://github.com/Seungmin-develop/Algorithm_Study) |
+| 동훈  | [알고리즘 - 너무쉽다](https://github.com/ldh019) |
+| 희직  | [개발 - 희직하는법](https://github.com/jhg3410) |
 #### 3주차
 
 | 이름 | 주제  |
 --------|-----------------------|
-| 승민 | 네트워크 - 네트워크의 기초 |                                                                                                                                                     
+| 승민 | [네트워크 - 네트워크의 기초](https://github.com/Seungmin-develop/Algorithm_Study/blob/main/CS_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/CS_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9D%98_%EA%B8%B0%EC%B4%88.pdf) |                                                                                                                                                     

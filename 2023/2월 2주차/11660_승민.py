@@ -30,3 +30,33 @@ for i in range(m):
         ans += (d[j][y2] - d[j][y1-1])
     
     print(ans)
+
+    
+# python3도 통과하는 코드 -> 2차원 누적합을 정확히 이해하고 활용한 코드
+import sys
+
+sys.setrecursionlimit(10000)
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+
+a = [list(map(int, input().split())) for _ in range(n)]
+
+m_a = [list(map(int, input().split())) for _ in range(m)]
+
+d = [[0]*(n+1) for _ in range(n+1)]
+
+# O(n^2) 1000*1000 = 1000000
+for i in range(1, n+1):
+    for j in range(1, n+1):
+        d[i][j] = a[i-1][j-1] + d[i][j-1] + d[i-1][j] - d[i-1][j-1]
+
+# O(n) 100000
+for i in range(m):
+    ans = 0
+
+    x1, y1, x2, y2 = m_a[i]
+
+    ans = d[x2][y2] - d[x2][y1-1] - d[x1-1][y2] + d[x1-1][y1-1]
+    
+    print(ans)

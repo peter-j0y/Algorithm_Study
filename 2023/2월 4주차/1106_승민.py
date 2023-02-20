@@ -11,14 +11,12 @@ data = []
 for _ in range(n):
     data.append(list(map(int, input().split())))
 
-data.sort(key = lambda x: x[1])
-
 INF = 10e9
-dp = [INF] * (1101)
+dp = [INF] * (c+101)
 dp[0] = 0
 
 for cost, customer in data:
-    for i in range(customer, c+100):
+    for i in range(customer, c+101):
         dp[i] = min(dp[i], dp[i-customer] + cost)
 
 print(min(dp[c:]))

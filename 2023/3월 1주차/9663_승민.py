@@ -4,7 +4,6 @@ input = sys.stdin.readline
 
 n = int(input())
 
-# board[i] = j는 i번째 줄에는 j번째 칸에 퀸을 놓겠다는 뜻
 board = [0] * n
 ans = 0
 

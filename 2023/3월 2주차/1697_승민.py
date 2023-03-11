@@ -9,7 +9,6 @@ n, k = map(int, input().split())
 q = deque()
 visited = [False]*(100001)
 q.append([n, 0])
-print(q)
 
 while(q):
     now, cnt = q.popleft()

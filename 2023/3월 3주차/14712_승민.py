@@ -29,7 +29,7 @@ def dfs(x, y):
     if arr[y-1][x] == 0 or arr[y][x-1] == 0 or arr[y-1][x-1] == 0:
         arr[y][x] = 1
         dfs(nx, ny)
-
+        arr[y][x] = 0
 
 dfs(1, 1)
 

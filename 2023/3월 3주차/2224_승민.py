@@ -4,7 +4,7 @@ import heapq
 input = sys.stdin.readline
 
 INF = int(1e9)
-al = 26
+al = 30
 graph = [[False] * (al*2) for _ in range(al*2)]
 cnt = 0
 
@@ -25,7 +25,7 @@ for i in range(al*2):
 
 for i in range(al*2):
     for j in range(al*2):
-        if graph[i][j] == True:
+        if i != j and graph[i][j] == True:
             cnt += 1
 
 print(cnt)

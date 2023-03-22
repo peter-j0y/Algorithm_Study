@@ -29,9 +29,7 @@ for i in range(1, n+1):
     for j in range(1, n+1):
         if graph[i][j] == True:
             graph[j][i] = True
-
-print(*graph, sep='\n')
-
+            
 for i in range(1, n+1):
     cnt = 0
 

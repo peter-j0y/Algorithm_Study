@@ -4,28 +4,27 @@
 
 using namespace std;
 
-vector<int> visited, checked;
-vector<int> v;
+vector<int> visited;
 vector<vector<int>> map;
 
-void func(int node) {
-    if (visited[node] == 1) return;
+int recursive(int node, int cnt) {
+    int ans = cnt;
     visited[node] = 1;
+    ans++;
 
     for (auto i: map[node]) {
-        if (checked[i] == 1) continue;
-        if (visited[i] == 0) func(i);
-        v[node] += v[i];
+        if (visited[i] == 0) ans = recursive(i, ans);
     }
-    checked[node] = 1;
+
+    return ans;
 }
 
 int main() {
     int n, m;
+    int max = -1e9;
+    vector<int> ans;
     cin >> n >> m;
 
-    visited.assign(n + 1, 0);
-    v.assign(n + 1, 1);
     map.assign(n + 1, vector<int>());
 
     for (int i = 0; i < m; i++) {
@@ -35,15 +34,20 @@ int main() {
     }
 
     for (int i = 1; i <= n; i++) {
-        checked.assign(n + 1, 0);
-        func(i);
+        visited.clear();
+        visited.assign(n + 1, 0);
+        int tmp = recursive(i, 0);
+        if (tmp > max) {
+            ans.clear();
+            ans.push_back(i);
+            max = tmp;
+        } else if (tmp == max) {
+            ans.push_back(i);
+        }
     }
 
-    int max = *max_element(v.begin(), v.end());
-
-    for (int i = 1; i <= n; i++) {
-        if (v[i] == max) cout << i << ' ';
-    }
+    for (auto i: ans)
+        cout << i << " ";
 
     return 0;
 }

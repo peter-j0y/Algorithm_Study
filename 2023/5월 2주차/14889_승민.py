@@ -18,7 +18,7 @@ def dfs(now, count):
         if visited[i]:
             continue
         visited[i] = 1
-        dfs(now+1, count+1)
+        dfs(i+1, count+1)
         visited[i] = 0
 
 n = int(input())

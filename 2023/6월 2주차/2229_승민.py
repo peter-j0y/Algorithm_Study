@@ -14,3 +14,5 @@ for i in range(2, n+1):
         dp[i] = max(dp[i], dp[j] + max(score[j+1:i+1]) - min(score[j+1:i+1]))
 
 print(dp[n])
+
+미ㅏ넝리ㅏㅁ너이ㅓㅁ라ㅣㄴㅇ러ㅣ민이ㅏ러
